@@ -60,33 +60,335 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
-    <article id="post-node" class="post-node post type-post status-publish format-standard hentry">
+    <article id="post-position" class="post-position post type-post status-publish format-standard hentry">
     <!---->
 
       <header class="entry-header">
         
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/07/03/node/">node</a>
-    </h1>
-  
-
-        
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/03/node/" data-id="cj4o46gcj0001l8w9m9ru6x4p" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/03/position/" data-id="cj4o4sm7p0002qcw9bs442g1k" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        
+        <hr>
+<h2 id="title-CSS-HEML-定位"><a href="#title-CSS-HEML-定位" class="headerlink" title="title:CSS+HEML 定位"></a>title:CSS+HEML 定位</h2><h2 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h2><h3 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h3><ul>
+<li>组成：content+padding+border+margin<ul>
+<li>content:width和height-内容的宽度和高度</li>
+<li>padding：内边距，有四个方向</li>
+<li>border：边框，边框只有宽度没有长度（高度）</li>
+<li>margin：外边距，盒子与盒子之间的距离，有四个方向margin的数值可以设置为负数</li>
+</ul>
+</li>
+<li>margin的兼容问题<ul>
+<li>上下排布的两个盒子，上面的盒子有margin-bottom值，下面的盒子有margin-top值，那么这两个值同时出现的时候，会发生margin值叠加（两个值取最大值）</li>
+<li>父子元素嵌套关系的时候，如果父级元素没有padding或border，子级元素设置margin-top值得时候，那么子级元素的这个值会传递给父级元素<ul>
+<li>给父级元素添加overflow：hidden；属性</li>
+<li>给父级元素添加border=top值或者padding-top值</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="BFC-IFC"><a href="#BFC-IFC" class="headerlink" title="BFC IFC"></a>BFC IFC</h2><h4 id="BFC块级盒子的渲染模式"><a href="#BFC块级盒子的渲染模式" class="headerlink" title="BFC块级盒子的渲染模式"></a>BFC块级盒子的渲染模式</h4><p>块级元素的特点：</p>
+<ul>
+<li>从父级元素的左上角开始排列，每个元素都独占一行</li>
+<li>可以直接设置盒子模型的所有属性</li>
+<li>不设置宽度和高度的时候，宽度是父级元素内容的宽度，高度是本身内容的高度</li>
+<li>可以嵌套所有元素<ul>
+<li>ul和ol里面嵌套的第一层级需是li</li>
+<li>dl里面嵌套的第一层级需是dl和dd</li>
+<li>p标签里面不能嵌套任何的块级元素</li>
+</ul>
+</li>
+</ul>
+<h4 id="IFC行内盒子的渲染模式"><a href="#IFC行内盒子的渲染模式" class="headerlink" title="IFC行内盒子的渲染模式"></a>IFC行内盒子的渲染模式</h4><h3 id="文字的垂直对齐方式"><a href="#文字的垂直对齐方式" class="headerlink" title="文字的垂直对齐方式"></a>文字的垂直对齐方式</h3><p>文字在一定的高度内垂直居中<code>line-height</code></p>
+<p>(文字默认大小是16px，默认是宋体 18px字体为微软雅黑的时候字体大小16px 所占的高度是21px)</p>
+<h3 id="文字超出部分用省略号代替的方法"><a href="#文字超出部分用省略号代替的方法" class="headerlink" title="文字超出部分用省略号代替的方法"></a>文字超出部分用省略号代替的方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">p&#123;</div><div class="line">	overflow:hidden;/*盒子溢出隐藏*/</div><div class="line">	text-overflow:ellipsis;/*多余根本的展现形式  ellipsis省略的意思*/</div><div class="line">	white-space：nowrap；/*文本不换行 nowrap不换行的意思*/&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<h4 id="多行文本溢出省略方法"><a href="#多行文本溢出省略方法" class="headerlink" title="多行文本溢出省略方法"></a>多行文本溢出省略方法</h4><p><a href="http://old.zhufengpeixun.cn/qianduanjishuziliao/qianduanCSSziliao/2016-12-11/671.html" target="_blank" rel="external">http://old.zhufengpeixun.cn/qianduanjishuziliao/qianduanCSSziliao/2016-12-11/671.html</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">&lt;p class=&quot;text&quot;&gt;&lt;/p&gt;</div><div class="line">移动端可以使用该方法，或者是webkit内核浏览器可以使用</div><div class="line">	.text&#123;</div><div class="line">		width:300px;</div><div class="line">		display:-webkit-box;</div><div class="line">		-webkit-box-orient:vertical;</div><div class="line">		-webkit-line-clamp:3;</div><div class="line">		overflow:hidden;</div><div class="line">		&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<h2 id="浮动float"><a href="#浮动float" class="headerlink" title="浮动float"></a>浮动float</h2><table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>left</td>
+<td>从左到右依次在一行显示</td>
+</tr>
+<tr>
+<td>right</td>
+<td>从右到左依次在一行显示</td>
+</tr>
+<tr>
+<td>none</td>
+<td>不浮动</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>从父级元素的该属性中继承</td>
+</tr>
+</tbody>
+</table>
+<p>浮动最初的作用是为了实现文字围绕盒子的排版</p>
+<p><strong>文档流：</strong>就是块级元素和行内元素默认的排布方式<br><strong>脱离文档流：</strong>文档流内的正常元素识别不到这个元素了（脱离文档流的元素相当于平行漂浮在文档流之上）</p>
+<h3 id="解决文档流元素不识别浮动元素的方法"><a href="#解决文档流元素不识别浮动元素的方法" class="headerlink" title="解决文档流元素不识别浮动元素的方法"></a>解决文档流元素不识别浮动元素的方法</h3><ul>
+<li>给浮动元素的父级元素添加固定的高度</li>
+<li>给浮动元素的父级元素添加溢出隐藏的属性</li>
+<li>在最后一个浮动元素后面添加一个块级元素，这个块级元素带有clear:both;属性</li>
+<li><strong>clear</strong>清除浮动元素到文档流内元素的影响（可以让文档流内的元素识别到浮动元素的高度）</li>
+<li>left                   清除float为left的影响</li>
+<li>right                清除的float为right的影响</li>
+<li>both                 清除float所有的影响</li>
+<li>inherit              从父级元素上继承该属性值</li>
+</ul>
+<blockquote>
+<p>带有clear属性的元素需要有以下几个特点：</p>
+<ul>
+<li>元素需是块级元素</li>
+<li>元素不能带有浮动属性</li>
+<li>元素必须放在最后一个浮动元素的后面</li>
+<li>元素不会显示在页面，用户是看不到这个元素的</li>
+</ul>
+</blockquote>
+<h4 id="盒子在视野中消失的方法"><a href="#盒子在视野中消失的方法" class="headerlink" title="盒子在视野中消失的方法"></a>盒子在视野中消失的方法</h4><ul>
+<li>visibility:hidden–盒子看不到，但是盒子所占的大小依然还在</li>
+<li>display:none–盒子完全从页面中消失</li>
+<li>opacity:0 –透明度为0（完全透明）</li>
+</ul>
+<p>####zoom<br>是专门兼容ie浏览器的，有上升的作用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">*zoom:1;/*只有Ie7可识别*/</div><div class="line">/*</div><div class="line">*属性名 的方式是css属性名hack</div><div class="line">&quot;*&quot;是用来兼容ie7版本浏览器</div><div class="line">*/</div></pre></td></tr></table></figure>
+<h4 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">浮动元素的父级选择器&#123;*zoom：1；&#125;</div><div class="line">浮动元素的父级选择器：after&#123;</div><div class="line">display：block；</div><div class="line">content：&quot;&quot;</div><div class="line">clear:both;</div><div class="line">&#125;</div><div class="line">.clearfix&#123;*zoom:1;&#125;</div><div class="line">.clearfix:after&#123;</div><div class="line">display:block;</div><div class="line">content:&quot;&quot;;</div><div class="line">clear:both;</div><div class="line">height:0;/*如果是在ie低版本浏览器下展示，有时候浏览器会默认空元素有1px的高度*/</div><div class="line">visibility:hidden;/*为了防止元素内有内容显示出来*/</div><div class="line">&#125;</div><div class="line">/*ie低版本是指ie6 7 8*/</div></pre></td></tr></table></figure>
+<h4 id="浮动元素的特点"><a href="#浮动元素的特点" class="headerlink" title="浮动元素的特点"></a>浮动元素的特点</h4><ul>
+<li>脱离文档流</li>
+<li>设置属性值为left时，浮动元素会依次从父级盒子的左侧向右排布，设置属性值为right时，浮动元素会依次从父级盒子的右侧向左排布</li>
+<li>可以直接设置盒子模型的所有属性</li>
+<li>不设置宽度高度的时候，宽高是本身内容的宽高</li>
+<li>浮动元素内的子元素，不会继承浮动属性，还是按照BFU和IFC模式进行排版</li>
+<li>在遇到父级盒子宽度最大值得时候，会自动折行</li>
+</ul>
+<h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><h3 id="相对定位："><a href="#相对定位：" class="headerlink" title="相对定位："></a>相对定位：</h3><p>元素通过上下左右四个方向的数值改变，来改变该元素在页面上的位置，<br>参照物是这个元素本身位置。<br>特点：</p>
+<ul>
+<li>参照物是元素本身位置</li>
+<li>没有脱离文档流</li>
+<li>当top和bottom同时有值得情况下，top值生效；</li>
+<li>当left和right同时有值的情况下，left值生效；</li>
+<li>任何元素都可以设置相对定位属性</li>
+<li>属性值支持负值</li>
+<li>相对定位元素位移发生改变，但是元素原来的位置还会被占用，其他元素还是正常识别这个元素原来的位置</li>
+</ul>
+<h4 id="box-shadow-盒子投影（阴影）"><a href="#box-shadow-盒子投影（阴影）" class="headerlink" title="box-shadow 盒子投影（阴影）"></a>box-shadow 盒子投影（阴影）</h4><p>第一个值：X轴移动距离 正值向右 负值向左<br>第二个值：Y轴移动距离 正直向下 负值向上<br>第三个值：模糊半径 没有负值<br>第四个值：阴影的投射范围，值越大阴影范围越大，支持负值（可省略）<br>第五个值：阴影的颜色<br>第六个值：不写代表外阴影，inset代表内阴影<br>PS：box-shadow是css3的属性，所以ie低版本浏览器不支持</p>
+<h4 id="border-radius边框圆角"><a href="#border-radius边框圆角" class="headerlink" title="border-radius边框圆角"></a>border-radius边框圆角</h4><p>border-radius:10px 20px 30px 40px ;<br>border-radius:10px 20px 40px;<br>border-radius:10px 20px;<br>border-radius：10px;<br>border-top-left-radius:10px;<br>border-top-right-radius:30px;<br>border-bottom-right-radius；40px;<br>border-bottom-left-radius:50px;</p>
+<p>PS：border-shadow是css3的属性，所以ie低版本浏览器不支持</p>
+<h3 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h3><p>特点</p>
+<ul>
+<li>可以脱离文档流</li>
+<li>可以设置参照物，参照物必须是其父级元素（直系父级）</li>
+<li>如果是同一个参照物，所有定位元素都会去找同一个起点</li>
+<li>可以设置层级关系</li>
+</ul>
+<p>参照物：</p>
+<ul>
+<li>默认参照物是盒子在画布出现的第一个位置</li>
+<li>自定义参照物：<ul>
+<li>参照物需是直系父级元素</li>
+<li>参照物需要带有定位属性</li>
+</ul>
+</li>
+</ul>
+<p>绝对定位元素</p>
+<ul>
+<li>有宽度和高度的情况下,top和bottom同时有值，top生效，left和right同时有值，left生效；</li>
+<li>没有宽度的情况下，top和bottom同时设置值的情况下，会将在这个盒子拉大，上下值都起作用，左右同理</li>
+</ul>
+<h4 id="脱离文档流的元素都有共同的特点"><a href="#脱离文档流的元素都有共同的特点" class="headerlink" title="脱离文档流的元素都有共同的特点"></a>脱离文档流的元素都有共同的特点</h4><ul>
+<li>不分行内和块级元素只要脱离文档流就可以直接设置盒子模型的所有属性</li>
+<li>宽高不设置的时候，默认是本身内容的宽高</li>
+<li>浮动元素 ，绝对定位元素， 固定定位元素脱离文档流</li>
+</ul>
+<h3 id="固定定位"><a href="#固定定位" class="headerlink" title="固定定位"></a>固定定位</h3><p>特点：</p>
+<ul>
+<li>脱离文档流</li>
+<li>参照物是浏览器的可视窗口</li>
+<li>任何元素都可以设置固定定位</li>
+</ul>
+<h3 id="定位元素的层级关系"><a href="#定位元素的层级关系" class="headerlink" title="定位元素的层级关系"></a>定位元素的层级关系</h3><ul>
+<li>默认是书写顺序在后的定位元素覆盖在顺序前的定位元素</li>
+<li>可以使用z-index属性修改定位元素的层级关系</li>
+<li>所有定位元素的z-index默认值都是一样的</li>
+<li>z-index值是数字没有单位，支持负数</li>
+<li>一般都是同级元素进行层级的比较</li>
+<li>当参照物是相对定位或绝对定位的时候，父级元素之间没有z-index值，子级元素的z-index值会出来做比较</li>
+</ul>
+<h2 id="ps的快捷键"><a href="#ps的快捷键" class="headerlink" title="ps的快捷键"></a>ps的快捷键</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ctrl+R</td>
+<td>显示标尺</td>
+</tr>
+<tr>
+<td>ctrl+”+”</td>
+<td>放大</td>
+</tr>
+<tr>
+<td>ctrl+”-“</td>
+<td>放小</td>
+</tr>
+<tr>
+<td>ctrl+1</td>
+<td>1:1显示效果图</td>
+</tr>
+<tr>
+<td>H</td>
+<td>抓手工具（可以移动稿件）</td>
+</tr>
+<tr>
+<td>V</td>
+<td>移动工具</td>
+</tr>
+<tr>
+<td>M</td>
+<td>矩形选框工具{测量盒子的大小边距</td>
+</tr>
+<tr>
+<td>C</td>
+<td>切片工具 用来切图</td>
+</tr>
+<tr>
+<td>ctrl+Z</td>
+<td>返回上一步</td>
+</tr>
+<tr>
+<td>ctrl+alt+Z</td>
+<td>一直向上返回</td>
+</tr>
+</tbody>
+</table>
+<h2 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h2><ul>
+<li>不能用汉字</li>
+<li>首字不能为数字<ul>
+<li>1div  111 222  ×</li>
+</ul>
+</li>
+<li>要用有意义的单词做名称</li>
+<li>可以使用”-“”_”连接不同的单词<ul>
+<li>login_info  login-info √</li>
+</ul>
+</li>
+<li>不能使用拼音或者拼音缩写命名</li>
+<li>ctrl+shift+/</li>
+</ul>
+<h3 id="a的四种"><a href="#a的四种" class="headerlink" title="a的四种"></a>a的四种</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">a&#123;/*只写一个a代表了a的四种状态*/</div><div class="line">	text-decoration:none;/*去掉a元素四种状态下的下划线*/</div><div class="line">&#125;</div><div class="line">a:link&#123;&#125;</div><div class="line">a:active&#123;&#125;</div><div class="line">a:visited&#123;&#125;</div><div class="line">a:hover&#123;&#125;</div></pre></td></tr></table></figure>
+<h2 id="css属性的继承"><a href="#css属性的继承" class="headerlink" title="css属性的继承"></a>css属性的继承</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">div&#123;</div><div class="line">	color:red;</div><div class="line">	float:left;</div><div class="line">	&#125;</div><div class="line">p&#123;</div><div class="line">	float:inherit;/*=float:left;*/</div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;div&gt;</div><div class="line">	此处文字文字为红色</div><div class="line">	&lt;p&gt;p元素内的文字是红色&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>css的继承分两种<ul>
+<li>默认继承 和文字有关的css属性都是可以默认继承的</li>
+<li>自定义继承 inherit继承父级元素某个属性的属性值 和盒子模型，盒子位置，层级有关的属性是不能继承的</li>
+</ul>
+</li>
+</ul>
+<p>【css属性继承请点击】<br><a href="http://www.zhufengpeixun.com/qianduanjishuziliao/qianduanCSSziliao/2016-07-24/530.html" target="_blank" rel="external">http://www.zhufengpeixun.com/qianduanjishuziliao/qianduanCSSziliao/2016-07-24/530.html</a></p>
+<h2 id="相对路径和绝对路径"><a href="#相对路径和绝对路径" class="headerlink" title="相对路径和绝对路径"></a>相对路径和绝对路径</h2><p>是指在某个文件中引入其他文件需要写路径</p>
+<h3 id="绝对路径：根据一段路径直接能找到想要找的目标"><a href="#绝对路径：根据一段路径直接能找到想要找的目标" class="headerlink" title="绝对路径：根据一段路径直接能找到想要找的目标"></a>绝对路径：根据一段路径直接能找到想要找的目标</h3><p>例如：ip 域名 D：/2017年教学第二期</p>
+<h3 id="相对路径：从一个参照物出发，去找另一个目标文件"><a href="#相对路径：从一个参照物出发，去找另一个目标文件" class="headerlink" title="相对路径：从一个参照物出发，去找另一个目标文件"></a>相对路径：从一个参照物出发，去找另一个目标文件</h3><ul>
+<li>寻找上一级文件的时候写../</li>
+<li>平级文件之间直接写名称</li>
+<li>向下查找的时候写“文件/子文件夹/子文件.后缀名”</li>
+</ul>
+<blockquote>
+<p>在工作中一般使用相对路径</p>
+</blockquote>
+<p>type的值 分别代表什么样的表单元素<br>每个表单元素怎样控制样式，并且能控制哪些样式？<br>什么样的表单元素需要模拟（用html其他元素和css来重新写一个类似表单的结构）</p>
+<h2 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h2><table>
+<thead>
+<tr>
+<th>标签名 tagName</th>
+<th>类型 type</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lable</td>
+<td>-</td>
+<td>表单标题</td>
+</tr>
+<tr>
+<td>input</td>
+<td>text</td>
+<td>文本框</td>
+</tr>
+<tr>
+<td>input</td>
+<td>password</td>
+<td>密码框</td>
+</tr>
+<tr>
+<td>input</td>
+<td>hidden</td>
+<td>看不到或引入一些文件 这个按钮起到辅助功能</td>
+</tr>
+<tr>
+<td>input</td>
+<td>reset</td>
+<td>重置</td>
+</tr>
+<tr>
+<td>input</td>
+<td>file</td>
+<td>上传文件</td>
+</tr>
+<tr>
+<td>input</td>
+<td>submit</td>
+<td>提交按钮</td>
+</tr>
+<tr>
+<td>checked</td>
+<td>-</td>
+<td>选中状态</td>
+</tr>
+<tr>
+<td>input</td>
+<td>button</td>
+<td>普通按钮</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ps快捷键"><a href="#ps快捷键" class="headerlink" title="ps快捷键"></a>ps快捷键</h2><p>T                文字工具<br>ctrl+enter  取消选择文字</p>
+<h2 id="background-背景"><a href="#background-背景" class="headerlink" title="background 背景"></a>background 背景</h2><h3 id="background-color"><a href="#background-color" class="headerlink" title="background -color"></a>background -color</h3><p>background -color:#ff6600<br>background -color:rgb(255,255,255) 白色<br>background -color:rgb(0,0,0) 黑色<br>background -color:rgba(0,0,0,0.2)<br>a是指透明度 范围0-1</p>
+<h3 id="background-image-url-“珠峰pc项目-img-logo-png”"><a href="#background-image-url-“珠峰pc项目-img-logo-png”" class="headerlink" title="background-image: url(“珠峰pc项目/img/logo.png”);"></a>background-image: url(“珠峰pc项目/img/logo.png”);</h3><p>引入背景图片<br>background-image: url(“珠峰pc项目/img/logo.png”),url(“0df431adcbef76094479cc212bdda3cc7cd99e19.jpg”);<br>可以引入多张图片，先引入的图片会覆盖在后引入图片的上面</p>
+<h3 id="background-repeat-no-repeat"><a href="#background-repeat-no-repeat" class="headerlink" title="background-repeat: no-repeat;"></a>background-repeat: no-repeat;</h3><p>背景图片平铺<br>no-repeat 不进行平铺<br>repeat-x   x轴平铺<br>repeat-y   y轴平铺<br>如果不写默认是repeat 平铺<br>background-repeat: no-repeat,repeat;<br>可以控制多个图片的平铺方式</p>
+<blockquote>
+<p>引入多个图片的方法，ie低版本浏览器不支持</p>
+<h3 id="background-position-10px-30px"><a href="#background-position-10px-30px" class="headerlink" title="background-position: 10px 30px;"></a>background-position: 10px 30px;</h3><p>背景图片的定位<br>top bottom left right center 可以两两组合<br>支持数值<br>第一个值是x轴 从左向右<br>第二个值是y轴 从上到下<br>background-position:center center; 盒子的中心与图片的中心重合</p>
+<h3 id="background-size-247px-440px"><a href="#background-size-247px-440px" class="headerlink" title="background-size: 247px 440px;"></a>background-size: 247px 440px;</h3><p>背景图片的大小 第一个值是指宽度 第二个值是指高度<br>cover此时会保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小。<br>contain    此时会保持图像的纵横比并将图像缩放成将适合背景定位区域的最大大小。<br>ie低版本浏览器不支持</p>
+<h3 id="background-origin"><a href="#background-origin" class="headerlink" title="background-origin"></a>background-origin</h3><p>指定背景图像的定位区域</p>
+<ul>
+<li>padding-box    背景图像填充框的相对位置</li>
+<li>border-box    背景图像边界框的相对位置</li>
+<li>content-box    背景图像的相对位置的内容框<br>ie低版本浏览器不支持<h3 id="background-linear-gradient-to-bottom-ffffff-ff6700"><a href="#background-linear-gradient-to-bottom-ffffff-ff6700" class="headerlink" title="background: linear-gradient(to bottom,#ffffff,#ff6700);"></a>background: linear-gradient(to bottom,#ffffff,#ff6700);</h3>线性渐变</li>
+</ul>
+</blockquote>
+<h3 id="雪碧图"><a href="#雪碧图" class="headerlink" title="雪碧图"></a>雪碧图</h3><p>将多个小图片放在一个大的透明图片文件中，调取时，统一调取这张图片，按照图片位置的定位来展现其中一部分<br>减少http请求，优化代码</p>
+<p>复制切片<br>alt   alt+shift<br>img是特殊的行内元素，可以设置宽高<br>alt+delete图层添加颜色</p>
+
       
     </div><!-- .entry-content -->
 
     <footer class="entry-meta">
-    <a href="/2017/07/03/node/">
+    <a href="/2017/07/03/position/">
     <time datetime="2017-07-03T12:10:31.615Z" class="entry-date">
         2017-07-03
     </time>
@@ -117,7 +419,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/02/hello/" data-id="cj4o46gbz0000l8w9qyij77cy" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/02/hello/" data-id="cj4o4sm6a0001qcw9tvoq344k" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -403,27 +705,271 @@
         
   
     <h1 class="entry-title">
-      <a class="article-title" href="/2017/07/01/hello-world/">vue 是个伟大的框架</a>
+      <a class="article-title" href="/2017/07/01/hello-world/">CSS盒子模型</a>
     </h1>
   
 
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/01/hello-world/" data-id="cj4o46gcr0002l8w931akitr8" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/01/hello-world/" data-id="cj4o4sm5k0000qcw9siziao4a" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        <h3 id="搭建HEXO-静态-博客"><a href="#搭建HEXO-静态-博客" class="headerlink" title="搭建HEXO(静态)博客"></a>搭建HEXO(静态)博客</h3><blockquote>
-<p>安装hexo模块<br>npm install hexo-cli -g<br>生成博客项目<br>hexo init blog<br>进入目录安装依赖<br>cd blog &amp;&amp; npm install<br>启动服务<br>hexo server<br>部署到github上</p>
-</blockquote>
-<p>##一个账号只能部署一个,名字必须交 用户名.github.io</p>
+        <h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><p>组成网页的每一个元素，在页面上的表现形式都是一个矩形（所占的位置是一个矩形），这一个个的矩形都叫做盒子（因为每一个矩形中都会装有内容）<br><strong>盒子模型</strong>是用来描述每一个元素之间的位置关系和盒子本身的大小属性</p>
+<p>元素的css属性分为2种：</p>
+<ul>
+<li>内置属性：元素天生自带的css属性</li>
+<li>自定义属性：人为添加给元素的css属性，自定义属性的属性权重大于内置属性</li>
+</ul>
+<h3 id="盒子模型的组成"><a href="#盒子模型的组成" class="headerlink" title="盒子模型的组成"></a>盒子模型的组成</h3><p>盒子模型由4部分组成；外边距，边框，内边距和内容部分组成，其中外边距，边距，内边距都是4个方向，内容只有宽高。</p>
+<p>每一个元素都有自己的内置样式，在编辑页面之前需要将这些内置样式同一重置，保证页面样式的正常展示。</p>
+<ul>
+<li>外边距：盒子与盒子之间的距离，用css属性margin表示，margin有四个方向，分别是</li>
+<li>margin -top;上外边距</li>
+<li>margin-right；右外边距</li>
+<li>margin-bottom；下外边距</li>
+<li>margin-left；左外边距<br>margin值可以是数字 百分比 em rem 并且margin值支持负值<br><strong>margin的缩写：</strong></li>
+<li>margin:10px 20px 30px 40px；上  右  下  左</li>
+<li>margin:10px 20px 30px ;上    左右   下</li>
+<li>margin：10px 20px;上下    左右</li>
+<li>margin：10px；四个方向数值一致</li>
+</ul>
+<p><strong>外边距的兼容问题：</strong></p>
+<ul>
+<li>当上面的盒子有下外边距，下面的盒子有上外边距的时候，两个值只有最大值起作用</li>
+<li>子级盒子的上边距会传递给父级盒子（指的是有包含关系的所有盒子），当父级盒子没有内边距或边框的时候，就会出现这个问题</li>
+<li><p>解决方式：<br>1.给父级元素添加overflow:hidden;（溢出隐藏）属性<br>2.给父级元素添加内边距或边框属性<br>3.将子元素的margin-top值变为父级元素的padding-top值（最优选择）</p>
+</li>
+<li><p>边框：在内边距和外边距之间，包裹盒子的四个防线的线条</p>
+</li>
+<li>边框有四个方向 上右下左</li>
+<li>边框可以设置颜色</li>
+<li>边框可以设置不同的样式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border-top-width</td>
+<td>上边框的宽度</td>
+</tr>
+<tr>
+<td>border-top-color</td>
+<td>上边框的颜色</td>
+</tr>
+<tr>
+<td>border-top-style</td>
+<td>上边框的样式</td>
+</tr>
+<tr>
+<td>border-top:1px solid red</td>
+<td>上边框宽度样式颜色</td>
+</tr>
+<tr>
+<td>border-width:10px 20px 30px 40px</td>
+<td>上右下左四个方向的边框宽度</td>
+</tr>
+<tr>
+<td>border-color:red yellow green pink;</td>
+<td>上右下左四个方向的颜色</td>
+</tr>
+<tr>
+<td>border-width:10px 20px 30px</td>
+<td>上    左右           下</td>
+</tr>
+<tr>
+<td>border-width:10px 20px;</td>
+<td>上下 左右的边框宽度</td>
+</tr>
+<tr>
+<td>border-width:10px;</td>
+<td>四个方向的边框宽度</td>
+</tr>
+<tr>
+<td>border：10px solid red;</td>
+<td>四个方向的宽度 颜色 样式都一致</td>
+</tr>
+</tbody>
+</table>
+<p><code>transparent</code>透明</p>
 <blockquote>
-<p>发布github需要一个发布到github的插件</p>
+<p>利用边框来制作三角形</p>
 </blockquote>
-<p>npm install hexo-deployer-git –save<br>配置发布文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">div&#123;</div><div class="line">	border-width:30px;</div><div class="line">	border-color:red transparent transparent;</div><div class="line">	width:0;</div><div class="line">	height:0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>内边距</strong>：边框距离盒子内容之间的距离<br>padding有四个方向，分别是</li>
+<li>padding -top;上内边距</li>
+<li>padding -right；右内边距</li>
+<li>padding -bottom；下内边距</li>
+<li>padding -left；左内边距<br>padding 值可以是数字 百分比 em rem<br><strong>padding 的缩写：</strong></li>
+<li>padding :10px 20px 30px 40px；上 右下 左</li>
+<li>padding :10px 20px 30px ;上 左 右 下</li>
+<li>padding ：10px 20px;上下左右</li>
+<li><p>padding ：10px；四个方向数值一致</p>
+</li>
+<li><p>内容（content)分别有2个属性来代表</p>
+<ul>
+<li>宽度width 数字 百分比 rem em</li>
+<li>高度 height 数字 百分比 rem em</li>
+</ul>
+</li>
+<li><p>如何计算盒子的大小</p>
+<ul>
+<li>盒子的宽度=内容的宽度+左右内边距+左右边框宽度</li>
+<li>boxWidth=width+(padding-left)+(padding-right)+(border-left-width)+(border-right-width)</li>
+<li>盒子的高度=内容的高度+上下内边距+上下边框宽度</li>
+<li>boxHeight=height+(padding-top)+ (padding-bottom)+(border-top-width)+(border-bottom-width)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">.box&#123;width:100px;padding:10px 20px 30px;border-width:20px 50px;border-style:solid;margin-bottom:10px;&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">boxWidth=100+20+20+50+50</div><div class="line">boxHeight=0+10+30+20+20</div></pre></td></tr></table></figure>
+<h3 id="BFC盒子渲染模式"><a href="#BFC盒子渲染模式" class="headerlink" title="BFC盒子渲染模式"></a>BFC盒子渲染模式</h3><blockquote>
+<p>块级盒子应该如何在页面中排布</p>
+</blockquote>
+<ul>
+<li>盒子从父级盒子的左上开始</li>
+<li>垂直排布</li>
+<li>如果遇到上下margin值得时候，会发生margin值的折叠</li>
+<li>所有BFC渲染的盒子都是基本流（文档流）内的盒子<br>block formatting context</li>
+</ul>
+<h3 id="IFC行内盒子渲染模式"><a href="#IFC行内盒子渲染模式" class="headerlink" title="IFC行内盒子渲染模式"></a>IFC行内盒子渲染模式</h3><blockquote>
+<p>行内盒子应该如何在页面中排布<br>inline formatting context</p>
+<ul>
+<li>盒子从父级盒子的左上开始</li>
+<li>横向排布，达到父级宽度的最大值，自动折行</li>
+<li>padding-top, padding-bottom, margin-top, margin-bottom,可以识别但是不起作用</li>
+</ul>
+</blockquote>
+<h3 id="块级元素的特点"><a href="#块级元素的特点" class="headerlink" title="块级元素的特点"></a>块级元素的特点</h3><ul>
+<li>独占一行，垂直排列</li>
+<li>可以设置盒子模型的所有属性(width ,height padding border margin)</li>
+<li>在没有为盒子设置宽度的时候，宽度是其父级盒子内容的宽度，高度是其本身内容的高度</li>
+<li>块级元素可以嵌套其他元素</li>
+<li>ul,ol里面第一层级只能是li</li>
+<li>dl第一层级只能是dt ,dd</li>
+<li>p不能嵌套块级元素<h3 id="行内元素的特点"><a href="#行内元素的特点" class="headerlink" title="行内元素的特点"></a>行内元素的特点</h3></li>
+<li>在一行显示，从左到右，达到父级元素的最大宽度的时候，自动折行</li>
+<li>不能设置宽度和高度，padding和margin的上下值</li>
+<li>宽度和高度是由本身的宽高决定的</li>
+<li>行内元素进行嵌套的时候，不要嵌套块级元素</li>
+<li>行内元素之间如果有空格或者回车，在页面上显示的时候就会出现盒子与盒子之间的空隙</li>
+</ul>
+<h3 id="overflow"><a href="#overflow" class="headerlink" title="overflow"></a>overflow</h3><table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hidden</td>
+<td>隐藏[超出盒子的部分不显示]</td>
+</tr>
+<tr>
+<td>auto</td>
+<td>自动识别[哪个方向内容溢出，那么哪个方向就会出现滚动条]</td>
+</tr>
+<tr>
+<td>scroll</td>
+<td>出现滚动条[无论是否溢出，都会出现滚动条]</td>
+</tr>
+<tr>
+<td>visible</td>
+<td>默认状态</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>从父元素的属性上继承属性值</td>
+</tr>
+</tbody>
+</table>
+<h3 id="display以什么样的方式显示元素"><a href="#display以什么样的方式显示元素" class="headerlink" title="display以什么样的方式显示元素"></a>display以什么样的方式显示元素</h3><table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>block</td>
+<td>块级</td>
+</tr>
+<tr>
+<td>inline</td>
+<td>行内</td>
+</tr>
+<tr>
+<td>inline-block</td>
+<td>行内块级元素</td>
+</tr>
+<tr>
+<td>list-item</td>
+<td>列表项目[列表队列]</td>
+</tr>
+<tr>
+<td>none</td>
+<td>没有</td>
+</tr>
+<tr>
+<td>table</td>
+<td>表格</td>
+</tr>
+<tr>
+<td>table-cell</td>
+<td>表格项</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ul&#123;display:table;&#125;</div><div class="line">li&#123;display:table-cell;&#125;</div></pre></td></tr></table></figure>
+<h4 id="inline-block行内块级元素"><a href="#inline-block行内块级元素" class="headerlink" title="inline-block行内块级元素"></a>inline-block行内块级元素</h4><ul>
+<li>从父级盒子的左上角开始排列，从左到右排列，遇到父级元素最大宽度的时候，自动折行</li>
+<li>可以直接设置盒子模型的所有属性</li>
+<li>元素之间如果有空格或者回车，在页面上显示的时候就会出现盒子与盒子之间的空隙</li>
+<li>同级元素之间默认垂直方向对齐方式为“基线对齐”<h5 id="基线对齐：同级元素之间的垂直对齐方式vertical-align-baseline"><a href="#基线对齐：同级元素之间的垂直对齐方式vertical-align-baseline" class="headerlink" title="基线对齐：同级元素之间的垂直对齐方式vertical-align:baseline;"></a>基线对齐：同级元素之间的垂直对齐方式vertical-align:baseline;</h5>|属性|描述|<br>|–|–|<br>|baseline|基线对齐|<br>|top|顶部对齐[兄弟元之间最高的那个元素的顶部对齐]<br>|bottom|底部对齐[兄弟元之间最高的那个元素的底部对齐]<br>|middle|中部对齐[兄弟元之间最高的那个元素的中部对齐]<blockquote>
+<p>如果想要改变基线对齐方式，那么需要给每一个改变的元素都添加上这个属性</p>
+</blockquote>
+</li>
+</ul>
+<p>如果让元素在一行显示？</p>
+<h3 id="水平对齐"><a href="#水平对齐" class="headerlink" title="水平对齐"></a>水平对齐</h3><ul>
+<li>文字的水平对齐<ul>
+<li>左对齐   text-align:left</li>
+<li>居中对齐  text-align:center</li>
+<li>右对齐 text-align:right<blockquote>
+<p>这个属性需要给有宽度的元素上</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>盒子的水平对齐<ul>
+<li>行内和或行内块级元素的对齐方式</li>
+<li>左对齐   text-align:left<ul>
+<li>居中对齐  text-align:center</li>
+<li>右对齐 text-align:right<blockquote>
+<p>这个属性需要给有宽度的元素上</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>块级元素的对齐方式<ul>
+<li>给这个块级元素宽度，并且margin:0 auto;左右值为auto即可，那么这个块级元素就会在其父级元素内水平居中</li>
+</ul>
+</li>
+</ul>
 
       
     </div><!-- .entry-content -->
@@ -468,7 +1014,7 @@
       <ul>
         
           <li>
-            <a href="/2017/07/03/node/">node</a>
+            <a href="/2017/07/03/position/">(no title)</a>
           </li>
         
           <li>
@@ -476,7 +1022,7 @@
           </li>
         
           <li>
-            <a href="/2017/07/01/hello-world/">vue 是个伟大的框架</a>
+            <a href="/2017/07/01/hello-world/">CSS盒子模型</a>
           </li>
         
       </ul>
