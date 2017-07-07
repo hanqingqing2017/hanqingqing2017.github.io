@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="媒体查询
+
+PS ctrl+a f8
+
+页面设计稿：6401136（iphone5/5s) 分辨率是7501334(iphone6) 分辨率是375*667
+设计稿的宽度=设备的分辨率*密度rem(font size of root element)
+meta：vp  tab 快捷键alt+v; 清" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>移动端总结-2 | 我的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="媒体查询  PS ctrl+a f8  页面设计稿：6401136（iphone5/5s) 分辨率是7501334(iphone6) 分辨率是375*667 设计稿的宽度=设备的分辨率*密度rem(font size of root element) meta：vp  tab 快捷键alt+v; 清除辅助线ctrl+f5 强刷新 水平垂直居中方法： 1.宽度固定  定位 margin 取宽高的一半">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动端总结-2">
+<meta property="og:url" content="http://yoursite.com/2017/07/07/mobile2/index.html">
+<meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="媒体查询  PS ctrl+a f8  页面设计稿：6401136（iphone5/5s) 分辨率是7501334(iphone6) 分辨率是375*667 设计稿的宽度=设备的分辨率*密度rem(font size of root element) meta：vp  tab 快捷键alt+v; 清除辅助线ctrl+f5 强刷新 水平垂直居中方法： 1.宽度固定  定位 margin 取宽高的一半">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/QQ图片7.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/QQ图片8.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/QQ图片9.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/14.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/15.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/16.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/17.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/QQ图片.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/QQ图片二.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/20.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/21.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/QQ图片3.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/QQ图片4.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/QQ图片5.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/QQ图片10.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/QQ图片11.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/QQ图片12.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/QQ图片13.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/07/mobile2/flexbox.png">
+<meta property="og:updated_time" content="2017-07-07T03:14:23.078Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动端总结-2">
+<meta name="twitter:description" content="媒体查询  PS ctrl+a f8  页面设计稿：6401136（iphone5/5s) 分辨率是7501334(iphone6) 分辨率是375*667 设计稿的宽度=设备的分辨率*密度rem(font size of root element) meta：vp  tab 快捷键alt+v; 清除辅助线ctrl+f5 强刷新 水平垂直居中方法： 1.宽度固定  定位 margin 取宽高的一半">
+<meta name="twitter:image" content="http://yoursite.com/2017/07/07/mobile2/QQ图片7.png">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="我的博客" rel="home">我的博客</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-mobile2" class="post-mobile2 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      移动端总结-2
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/07/mobile2/" data-id="cj4tcito30006xww956publc6" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>媒体查询</p>
+<ul>
+<li>PS ctrl+a f8</li>
+</ul>
+<p>页面设计稿：<br>640<em>1136（iphone5/5s) 分辨率是<br>750</em>1334(iphone6) 分辨率是375*667</p>
+<p>设计稿的宽度=设备的分辨率*密度<br>rem(font size of root element)</p>
+<p>meta：vp  tab 快捷键<br>alt+v; 清除辅助线<br>ctrl+f5 强刷新</p>
+<h4 id="水平垂直居中方法："><a href="#水平垂直居中方法：" class="headerlink" title="水平垂直居中方法："></a>水平垂直居中方法：</h4><blockquote>
+<p>1.宽度固定  定位 margin 取宽高的一半（负数）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">     .box&#123;</div><div class="line">         width:200px;</div><div class="line">         height:200px;</div><div class="line">         background:#71c171;</div><div class="line">         position:relative;</div><div class="line">        &#125;</div><div class="line">      .box1&#123;</div><div class="line">            position: absolute;</div><div class="line">            top:50%;</div><div class="line">            left:50%;</div><div class="line">            width:100px;</div><div class="line">            height:100px;</div><div class="line">            /*margin-top:-50px;*/</div><div class="line">            /*margin-left:-50px;*/</div><div class="line">            margin:-50px 0  0 -50px;</div><div class="line">            background:#00FF00;</div><div class="line">        &#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure></p>
+<p>2.定位  四个方向全部为0,margin:auto<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">.box2&#123;</div><div class="line">            width:300px;</div><div class="line">            height:200px;</div><div class="line">            background:#71c171;</div><div class="line">            position:relative;</div><div class="line">        &#125;</div><div class="line">        .box3&#123;</div><div class="line">            width:100px;</div><div class="line">            height:100px;</div><div class="line">            background:#008000;</div><div class="line">            position:absolute;</div><div class="line">            top:0;</div><div class="line">            bottom:0;</div><div class="line">            left:0;</div><div class="line">            right:0;</div><div class="line">            margin:auto;</div><div class="line">        &#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure></p>
+<p>3.flex(父元素上面)<br>    display:flex;<br>    justify-content: center;  水平居中<br>    align-items: center;  垂直居中</p>
+</blockquote>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">   &lt;style&gt;</div><div class="line">.box4&#123;</div><div class="line">           width:200px;</div><div class="line">           height:200px;</div><div class="line">           background:#00a57f;</div><div class="line">           display:flex;</div><div class="line">           justify-content: center;</div><div class="line">           /*水平居中*/</div><div class="line">           align-items: center;</div><div class="line">           /*垂直居中*/</div><div class="line">       &#125;</div><div class="line">       .box5&#123;</div><div class="line">           width:100px;</div><div class="line">           height:100px;</div><div class="line">           background:#00ffea;</div><div class="line">           margin:0 auto;</div><div class="line">       &#125;</div><div class="line">&lt;/style&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">      &lt;div class=&quot;box4&quot;&gt;</div><div class="line">      &lt;div class=&quot;box5&quot;&gt;&lt;/div&gt;</div><div class="line">       &lt;/div&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+</code></pre><h2 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h2><blockquote>
+<p>flex常用属性<br> 新浪:(4个兼容写法)<br>            /<em>display: -webkit-box;   </em>/<br>            /<em>display: -webkit-flex;</em>/<br>            /<em>display: -ms-flexbox;   </em>/<br>            /<em>display: flex;</em>/</p>
+</blockquote>
+<p> -webkit-box-orient: vertical;<br>           <em>/表示子元素在父元素里面的排列方向  </em>/<br>            -webkit-box-pack: justify;<br>            /<em>表示子元素的对齐方式 </em>/<br>            display: -webkit-box</p>
+<h4 id="1-flex-direction方向（父级元素）"><a href="#1-flex-direction方向（父级元素）" class="headerlink" title="1.flex-direction方向（父级元素）"></a>1.flex-direction方向（父级元素）</h4><blockquote>
+<p>flex-direction：row | row-reverse | column | column-reverse</p>
+<ul>
+<li>row：<br>主轴与行内轴方向作为默认的书写模式。即横向从左到右排列（左对齐）。</li>
+<li>row-reverse：<br>对齐方式与row相反。</li>
+<li>column：<br>主轴与块轴方向作为默认的书写模式。即纵向从上往下排列（顶对齐）。</li>
+<li>column-reverse：<br>对齐方式与column相反。</li>
+</ul>
+</blockquote>
+<p><img src="./QQ图片7.png" alt="Alt text"><br><img src="./QQ图片8.png" alt="Alt text"><br><img src="./QQ图片9.png" alt="Alt text"></p>
+<h4 id="2-flex-wrap折行（父级元素）"><a href="#2-flex-wrap折行（父级元素）" class="headerlink" title="2.flex-wrap折行（父级元素）"></a>2.flex-wrap折行（父级元素）</h4><blockquote>
+<ul>
+<li>flex-wrap：nowrap | wrap | wrap-reverse</li>
+<li>nowrap：<br>flex容器为单行。该情况下flex子项可能会溢出容器</li>
+<li>wrap：<br>flex容器为多行。该情况下flex子项溢出的部分会被放置到新行，子项内部会发生断行</li>
+<li>wrap-reverse：<br>反转 wrap 排列。<br><img src="./14.png" alt="Alt text"><br><img src="./15.png" alt="Alt text"></li>
+</ul>
+</blockquote>
+<h4 id="3-flex-flow-flex-direction-flex-wrap"><a href="#3-flex-flow-flex-direction-flex-wrap" class="headerlink" title="3.flex-flow(flex-direction  flex-wrap)"></a>3.flex-flow(flex-direction  flex-wrap)</h4><ul>
+<li>&lt;’ flex-direction ‘&gt;：定义弹性盒子元素的排列方向。</li>
+<li>&lt;’ flex-wrap ‘&gt;：     控制flex容器是单行或者多行。<br><img src="./16.png" alt="Alt text"><br><img src="./17.png" alt="Alt text"></li>
+</ul>
+<h4 id="4-justify-content-居中方式"><a href="#4-justify-content-居中方式" class="headerlink" title="4.justify-content(居中方式)"></a>4.justify-content(居中方式)</h4><ul>
+<li>justify-content：flex-start | flex-end | center | space-between | space-around</li>
+<li>flex-start：<br>弹性盒子元素将向行起始位置对齐。该行的第一个子元素的主起始位置的边界将与该行的主起始位置的边界对齐，同时所有后续的伸缩盒项目与其前一个项目对齐。</li>
+<li>flex-end：<br>弹性盒子元素将向行结束位置对齐。该行的第一个子元素的主结束位置的边界将与该行的主结束位置的边界对齐，同时所有后续的伸缩盒项目与其前一个项目对齐。</li>
+<li>center：<br>弹性盒子元素将向行中间位置对齐。该行的子元素将相互对齐并在行中居中对齐，同时第一个元素与行的主起始位置的边距等同与最后一个元素与行的主结束位置的边距（如果剩余空间是负数，则保持两端相等长度的溢出）。</li>
+<li>space-between：<br>弹性盒子元素会平均地分布在行里。如果最左边的剩余空间是负数，或该行只有一个子元素，则该值等效于’flex-start’。在其它情况下，第一个元素的边界与行的主起始位置的边界对齐，同时最后一个元素的边界与行的主结束位置的边距对齐，而剩余的伸缩盒项目则平均分布，并确保两两之间的空白空间相等。</li>
+<li>space-around：<br>弹性盒子元素会平均地分布在行里，两端保留子元素与子元素之间间距大小的一半。如果最左边的剩余空间是负数，或该行只有一个伸缩盒项目，则该值等效于’center’。在其它情况下，伸缩盒项目则平均分布，并确保两两之间的空白空间相等，同时第一个元素前的空间以及最后一个元素后的空间为其他空白空间的一半。<br><img src="./QQ图片.png" alt="Alt text"><br><img src="./QQ图片二.png" alt="Alt text"></li>
+</ul>
+<h4 id="5-align-items-垂直居中"><a href="#5-align-items-垂直居中" class="headerlink" title="5.align-items(垂直居中)"></a>5.align-items(垂直居中)</h4><ul>
+<li>flex-start：<br>弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界。</li>
+<li>flex-end：<br>弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界。</li>
+<li>center：<br>弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。</li>
+<li>baseline：<br>如弹性盒子元素的行内轴与侧轴为同一条，则该值与’flex-start’等效。其它情况下，该值将参与基线对齐。</li>
+<li>stretch：<br>如果指定侧轴大小的属性值为’auto’，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照’min/max-width/height’属性</li>
+</ul>
+<p><img src="./20.png" alt="Alt text"><br><img src="./21.png" alt="Alt text"></p>
+<h4 id="6-align-content-多行"><a href="#6-align-content-多行" class="headerlink" title="6.align-content(多行)"></a>6.align-content(多行)</h4><ul>
+<li><p>align-content：flex-start | flex-end | center | space-between | space-around | stretch</p>
+</li>
+<li><p>flex-start：<br>各行向弹性盒容器的起始位置堆叠。弹性盒容器中第一行的侧轴起始边界紧靠住该弹性盒容器的侧轴起始边界，之后的每一行都紧靠住前面一行。</p>
+</li>
+<li>flex-end：<br>各行向弹性盒容器的结束位置堆叠。弹性盒容器中最后一行的侧轴起结束界紧靠住该弹性盒容器的侧轴结束边界，之后的每一行都紧靠住前面一行。</li>
+<li>center：<br>各行向弹性盒容器的中间位置堆叠。各行两两紧靠住同时在弹性盒容器中居中对齐，保持弹性盒容器的侧轴起始内容边界和第一行之间的距离与该容器的侧轴结束内容边界与第最后一行之间的距离相等。（如果剩下的空间是负数，则各行会向两个方向溢出的相等距离。）</li>
+<li>space-between：<br>各行在弹性盒容器中平均分布。如果剩余的空间是负数或弹性盒容器中只有一行，该值等效于’flex-start’。在其它情况下，第一行的侧轴起始边界紧靠住弹性盒容器的侧轴起始内容边界，最后一行的侧轴结束边界紧靠住弹性盒容器的侧轴结束内容边界，剩余的行则按一定方式在弹性盒窗口中排列，以保持两两之间的空间相等。</li>
+<li>space-around：<br>各行在弹性盒容器中平均分布，两端保留子元素与子元素之间间距大小的一半。如果剩余的空间是负数或弹性盒容器中只有一行，该值等效于’center’。在其它情况下，各行会按一定方式在弹性盒容器中排列，以保持两两之间的空间相等，同时第一行前面及最后一行后面的空间是其他空间的一半。</li>
+<li>stretch：<br>各行将会伸展以占用剩余的空间。如果剩余的空间是负数，该值等效于’flex-start’。在其它情况下，剩余空间被所有行平分，以扩大它们的侧轴尺寸。<br><img src="./QQ图片3.png" alt="Alt text"><br><img src="./QQ图片4.png" alt="Alt text"><br><img src="./QQ图片5.png" alt="Alt text"><h4 id="7-box-pack：start-center-end-justify"><a href="#7-box-pack：start-center-end-justify" class="headerlink" title="7.box-pack：start | center | end | justify"></a>7.box-pack：start | center | end | justify</h4></li>
+<li>start：<br>设置伸缩盒对象的子元素从开始位置对齐（大部分情况等同于左对齐，受）</li>
+<li>center：<br>设置伸缩盒对象的子元素居中对齐</li>
+<li>end：<br>设置伸缩盒对象的子元素从结束位置对齐（大部分情况等同于右对齐）</li>
+<li>justify：<br>设置或伸缩盒对象的子元素两端对齐<br><img src="./QQ图片10.png" alt="Alt text"><br><img src="./QQ图片11.png" alt="Alt text"><br><img src="./QQ图片12.png" alt="Alt text"><br><img src="./QQ图片13.png" alt="Alt text"></li>
+</ul>
+<h4 id="box-pack-justify"><a href="#box-pack-justify" class="headerlink" title="box-pack:justify"></a>box-pack:justify</h4><p><img src="./flexbox.png" alt="Alt text"></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/07/07/mobile2/">
+    <time datetime="2017-07-07T03:10:08.370Z" class="entry-date">
+        2017-07-07
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/07/07/JS1/" rel="prev"><span class="meta-nav">←</span> JavaScript基础总结</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/07/07/mobile1/" rel="next">移动端总结-1 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/07/JS3/">JavaScript基础总结3</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/07/JS2/">JavaScript基础总结2</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/07/JS1/">JavaScript基础总结</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/07/mobile2/">移动端总结-2</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/07/mobile1/">移动端总结-1</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

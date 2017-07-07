@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="预解释（变量提升）在当前作用域中，js代码执行之前，把所有带var和function关键字的进行声明或者定义
+
+浏览器加载html时候，会提供一个供js代码执行的环境–》window（全局作用域）
+
+
+通过var声明的时候 会给变量赋值一个默认值undefined
+预解释的时候 带var 只声明 不" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>JavaScript基础总结2 | 我的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="预解释（变量提升）在当前作用域中，js代码执行之前，把所有带var和function关键字的进行声明或者定义  浏览器加载html时候，会提供一个供js代码执行的环境–》window（全局作用域）   通过var声明的时候 会给变量赋值一个默认值undefined 预解释的时候 带var 只声明 不定义 带function 预解释的时候 声明加定义 预解释完成后，代码自上而下执行 声明 var n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript基础总结2">
+<meta property="og:url" content="http://yoursite.com/2017/07/07/JS2/index.html">
+<meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="预解释（变量提升）在当前作用域中，js代码执行之前，把所有带var和function关键字的进行声明或者定义  浏览器加载html时候，会提供一个供js代码执行的环境–》window（全局作用域）   通过var声明的时候 会给变量赋值一个默认值undefined 预解释的时候 带var 只声明 不定义 带function 预解释的时候 声明加定义 预解释完成后，代码自上而下执行 声明 var n">
+<meta property="og:updated_time" content="2017-07-07T04:00:15.145Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript基础总结2">
+<meta name="twitter:description" content="预解释（变量提升）在当前作用域中，js代码执行之前，把所有带var和function关键字的进行声明或者定义  浏览器加载html时候，会提供一个供js代码执行的环境–》window（全局作用域）   通过var声明的时候 会给变量赋值一个默认值undefined 预解释的时候 带var 只声明 不定义 带function 预解释的时候 声明加定义 预解释完成后，代码自上而下执行 声明 var n">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="我的博客" rel="home">我的博客</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-JS2" class="post-JS2 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      JavaScript基础总结2
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/07/JS2/" data-id="cj4tcitkp0000xww9dyez7cu5" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="预解释（变量提升）"><a href="#预解释（变量提升）" class="headerlink" title="预解释（变量提升）"></a>预解释（变量提升）</h3><p>在当前作用域中，js代码执行之前，把所有带var和function关键字的进行声明或者定义</p>
+<blockquote>
+<p>浏览器加载html时候，会提供一个供js代码执行的环境–》window（全局作用域）</p>
+</blockquote>
+<ul>
+<li>通过var声明的时候 会给变量赋值一个默认值undefined</li>
+<li>预解释的时候 带var 只声明 不定义 带function 预解释的时候 声明加定义</li>
+<li>预解释完成后，代码自上而下执行</li>
+<li>声明 var num function fn</li>
+<li>定义 赋值 num=123</li>
+</ul>
+<h5 id="全局变量和私有变量"><a href="#全局变量和私有变量" class="headerlink" title="全局变量和私有变量"></a>全局变量和私有变量</h5><p>全局变量就是在全局作用域中声明的变量<br>私有变量就是在私有作用域中声明的变量</p>
+<p>预解释是针对于当前作用域 只发生在当前作用域中 首先开始对window进行预解释 函数执行的时候会形成一个私有作用域 然后 函数执行的时候也会进行 预解释<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function fn()&#123;</div><div class="line">console.log(name1);//undefined</div><div class="line">var name1=&apos;nihao&apos;;</div><div class="line">console.log(name1）;//&apos;nihao&apos;</div><div class="line">&#125;</div><div class="line">fn()</div><div class="line">console.log(name1);//报错</div></pre></td></tr></table></figure></p>
+<p><strong>函数执行</strong>  将函数里的js代码加载运行，也需要一个供函数里js代码执行的环境–》私有作用域</p>
+<h4 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h4><p>如果在私有作用域中遇到一个变量，首先看是不是形参或者有没有在当前作用域预解释的时候声明过，如果没有声明过也不是形参 就会去上级作用域中查找，一直找到window为止<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var nn=123;</div><div class="line">function fn()&#123;</div><div class="line">	console.log(nn);//123</div><div class="line">	nn=666;</div><div class="line">	console.log(nn);//666</div><div class="line">&#125;</div><div class="line">fn()</div><div class="line">console.log(nn);//666</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var num;</div><div class="line">function fn(num)&#123;//fn的私有变量num=10；</div><div class="line">	return function()&#123;</div><div class="line">		++num;</div><div class="line">		console.;log(num);//11</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">var f=fn(10);</div><div class="line">fn();</div></pre></td></tr></table></figure>
+<p><strong>如何看上级作用域？</strong><br>就看 函数是在哪里定义的</p>
+<h3 id="预解释无节操"><a href="#预解释无节操" class="headerlink" title="预解释无节操"></a>预解释无节操</h3><blockquote>
+<p>return下面的代码虽然不执行 也要进行预解释 但是return右边 不会进行预解释 因为把它当做一个值返回出去；</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function fn1()&#123;</div><div class="line">	console.log(fn);</div><div class="line">	return function fn()&#123;//return 右边不会进行预解释 因为把它当做一个值返回出去；</div><div class="line">		console.log(&apos;fn&apos;);</div><div class="line">	&#125;</div><div class="line">	var num=123;//虽然不执行 也要进行预解释</div><div class="line">&#125;</div><div class="line">fn1();</div></pre></td></tr></table></figure>
+<p>in：验证某一个属性是否属于这个对象(不管是私有的属性还是公有的属性，只要有返回的结果就是true)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">          name: &apos;常哲楠&apos;,</div><div class="line">          age: 81</div><div class="line">      &#125;;</div><div class="line">      console.log(&apos;name&apos; in obj);//-&gt;true</div><div class="line">      console.log(&apos;sex&apos; in obj);//-&gt;false</div><div class="line">      console.log(name in obj);//-&gt;window.name in obj -&gt;&apos;&apos; in obj -&gt;false 如果name不加引号它的意思是把name这个变量存储值作为检测的依据，来检测存储的这个值是否为obj的一个属性，加引号&apos;name&apos;就是属性名，验证obj中是否有name这个属性</div><div class="line">      console.log(age in obj);//-&gt;Uncaught ReferenceError: age is not defined</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>获取上一个元素节点的思路<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function prev(curEle) &#123;//curEle-&gt;currentElement</div><div class="line">        if (&apos;previousElementSibling&apos; in curEle) &#123;//-&gt;兼容</div><div class="line">            return curEle.previousElementSibling;</div><div class="line">        &#125;</div><div class="line">        //-&gt;不兼容</div><div class="line">        var pre = curEle.previousSibling;//-&gt;获取上一个哥哥节点</div><div class="line">        while (pre &amp;&amp; pre.nodeType !== 1) &#123;</div><div class="line">            /*</div><div class="line">             条件</div><div class="line">             pre !== null ：不为空，还没有找到头  =&gt; pre 这样写也可以理解为它是true，不等于null的，也可以这样写 !!pre</div><div class="line">             pre.nodeType !== 1：不是元素，还没有找到人</div><div class="line">             */</div><div class="line">            pre = pre.previousSibling;</div><div class="line">        &#125;</div><div class="line">        return pre;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>6.单例模式<br>-&gt;单例模式是我们以后项目开发中业务逻辑编写最常用的设计模式：在业务逻辑相对复杂的时候，我们会基于单例模式引入“发布订阅模式”、“promise模式”…<br>-&gt;构造原型模式是我们以后项目中封装类库、组件、插件、框架最常用的设计模式</p>
+</blockquote>
+<p>单例模式：解决了变量冲突，实现了分类分组，在单例模式中我们的对象名叫做“命名空间”:单例模式把实现和描述同一件事物的属性和方法进行分类归纳，然后汇总的同一个命名空间下，不同的命名空间互不冲突</p>
+<p>  =&gt;真实项目中我们实现模块化开发基本上都采用单例模式</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/07/07/JS2/">
+    <time datetime="2017-07-07T03:33:05.497Z" class="entry-date">
+        2017-07-07
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/07/07/JS3/" rel="prev"><span class="meta-nav">←</span> JavaScript基础总结3</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/07/07/JS1/" rel="next">JavaScript基础总结 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/07/JS3/">JavaScript基础总结3</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/07/JS2/">JavaScript基础总结2</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/07/JS1/">JavaScript基础总结</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/07/mobile2/">移动端总结-2</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/07/mobile1/">移动端总结-1</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
