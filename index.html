@@ -75,7 +75,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/07/JS3/" data-id="cj4tcitmf0002xww9midreney" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/07/JS3/" data-id="cj4tcqpgq0001nsw9pc49mlou" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -126,9 +126,9 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function Fn(name)&#123;</div><div class="line">	var school = &apos;大学&apos;；</div><div class="line">	this.name = name;</div><div class="line">	this.say = function ()&#123;</div><div class="line">		console.log(&apos;my name is&apos;+ this.name +&apos;,i study in the&apos; +school)</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">var f1 = new Fn(&apos;赵薇&apos;);</div><div class="line">//检测某一个对象是否拥有某一个公有的属性：检测attr是否为obj的公有属性</div><div class="line">function hasPublicProperty(obj,attr) &#123;</div><div class="line">	return (attr in obj) &amp;&amp; !obj.hasOwnProperty(attr);//满足条件attr是obj的一个属性并且不是私有的属性</div><div class="line">&#125;</div><div class="line">console.log (hasPublicProperty(f1,&apos;say&apos;));//false</div></pre></td></tr></table></figure>
 <h4 id="5-单例模式的误区"><a href="#5-单例模式的误区" class="headerlink" title="5.单例模式的误区"></a>5.单例模式的误区</h4><p><strong>单例模式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var personRender = &#123;&#125;;</div><div class="line">var studentRender =(function()&#123;</div><div class="line">	return&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;) ();</div></pre></td></tr></table></figure></p>
-<p><strong>构造函数模式（有一些面试官认识这个才是单例模式）</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">var p = new Person();</div></pre></td></tr></table></figure></p>
+<p><strong>构造函数模式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">var p = new Person();</div></pre></td></tr></table></figure></p>
 <p><strong>什么叫做闭包</strong><br>函数执行形成一个私有的作用域=》闭包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function fn()&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">fn()</div></pre></td></tr></table></figure></p>
-<p>外界的面试官很多都认为只有形成一个不销毁的私有作用域才叫闭包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">(function () &#123;</div><div class="line"></div><div class="line">&#125;) ();</div><div class="line">function fn()&#123;</div><div class="line">	return function()&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">var f= fn();</div></pre></td></tr></table></figure></p>
+<p>闭包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">(function () &#123;</div><div class="line"></div><div class="line">&#125;) ();</div><div class="line">function fn()&#123;</div><div class="line">	return function()&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">var f= fn();</div></pre></td></tr></table></figure></p>
 <h3 id="6-原型模式"><a href="#6-原型模式" class="headerlink" title="6.原型模式"></a>6.原型模式</h3><p><strong>以下的几句话不要管为什么，因为他们是规定</strong></p>
 <ul>
 <li><p>每一个函数数据类型（普通函数、类（内置类、自定义类））都天生自带一个属性prototype,这个属性的属性值是一个对象数据类型的结果<code>Person.prototype=&gt;{ }</code></p>
@@ -201,7 +201,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/07/JS2/" data-id="cj4tcitkp0000xww9dyez7cu5" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/07/JS2/" data-id="cj4tcqph90003nsw9740i0ukb" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -271,7 +271,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/07/JS1/" data-id="cj4tcitm60001xww9uux1y06n" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/07/JS1/" data-id="cj4tcqpg60000nsw9fqxk87td" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -507,7 +507,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/07/mobile2/" data-id="cj4tcito30006xww956publc6" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/07/mobile2/" data-id="cj4tcqphk0005nsw9pq5p2gis" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -620,7 +620,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/07/mobile1/" data-id="cj4tcitoa0007xww9vbpnjwqx" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/07/mobile1/" data-id="cj4tcqphd0004nsw98uu4awwz" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -1014,7 +1014,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/03/position/" data-id="cj4tcitnt0005xww94kh0ypjx" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/03/position/" data-id="cj4tcqphs0006nsw92rut32dj" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -1365,7 +1365,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/02/hello/" data-id="cj4tcitnk0004xww928kjtiiy" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/02/hello/" data-id="cj4tcqpi00007nsw9btw96241" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -1658,7 +1658,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/01/hello-world/" data-id="cj4tcitnf0003xww9zd46mvri" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/01/hello-world/" data-id="cj4tcqpgy0002nsw9mkpd0rxn" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
