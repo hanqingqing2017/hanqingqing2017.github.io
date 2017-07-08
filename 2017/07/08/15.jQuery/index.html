@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="19、jQuery##一个javascript 函数库，里面提供了 强大的选择器  DOM方法封装 ajax完整的封装  动画animate
+jQuery 版本 1.0  2.0  3.0、1、1.0版本 兼容IE6-82、2.0版本   不兼容IE6-83、3.0 版本   不兼容ie6-8  增" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>jQuery基础总结15 | 我的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="19、jQuery##一个javascript 函数库，里面提供了 强大的选择器  DOM方法封装 ajax完整的封装  动画animate jQuery 版本 1.0  2.0  3.0、1、1.0版本 兼容IE6-82、2.0版本   不兼容IE6-83、3.0 版本   不兼容ie6-8  增加了一些新特性  同时 弃用了一些方法 console.log(jQuery )    //构造函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery基础总结15">
+<meta property="og:url" content="http://yoursite.com/2017/07/08/15.jQuery/index.html">
+<meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="19、jQuery##一个javascript 函数库，里面提供了 强大的选择器  DOM方法封装 ajax完整的封装  动画animate jQuery 版本 1.0  2.0  3.0、1、1.0版本 兼容IE6-82、2.0版本   不兼容IE6-83、3.0 版本   不兼容ie6-8  增加了一些新特性  同时 弃用了一些方法 console.log(jQuery )    //构造函数">
+<meta property="og:updated_time" content="2017-07-08T06:20:32.875Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery基础总结15">
+<meta name="twitter:description" content="19、jQuery##一个javascript 函数库，里面提供了 强大的选择器  DOM方法封装 ajax完整的封装  动画animate jQuery 版本 1.0  2.0  3.0、1、1.0版本 兼容IE6-82、2.0版本   不兼容IE6-83、3.0 版本   不兼容ie6-8  增加了一些新特性  同时 弃用了一些方法 console.log(jQuery )    //构造函数">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="我的博客" rel="home">我的博客</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-15.jQuery" class="post-15.jQuery post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      jQuery基础总结15
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/15.jQuery/" data-id="cj4v4j66u0006t8w9r2twl5j4" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="19、jQuery"><a href="#19、jQuery" class="headerlink" title="19、jQuery"></a>19、jQuery</h1><p>##一个javascript 函数库，里面提供了 强大的选择器  DOM方法封装 ajax完整的封装  动画animate</p>
+<h3 id="jQuery-版本-1-0-2-0-3-0、"><a href="#jQuery-版本-1-0-2-0-3-0、" class="headerlink" title="jQuery 版本 1.0  2.0  3.0、"></a>jQuery 版本 1.0  2.0  3.0、</h3><p>1、1.0版本 兼容IE6-8<br>2、2.0版本   不兼容IE6-8<br>3、3.0 版本   不兼容ie6-8  增加了一些新特性  同时 弃用了一些方法</p>
+<p>console.log(jQuery )    //构造函数<br>console.log($==jQuery )   //true<br>console.log(jQuery.fn===jQuery.prototype)  //jQuery 原型上的属性方法  通过jQuery对象调用</p>
+<p>var  $oDiv= new  $(‘#oDiv’)</p>
+<p>$.fn.jQuery    //查看jQuery 版本号</p>
+<h3 id="有可能和其他类库冲突-解决-和其他类库的冲突"><a href="#有可能和其他类库冲突-解决-和其他类库的冲突" class="headerlink" title="有可能和其他类库冲突  解决$和其他类库的冲突"></a>有可能和其他类库冲突  解决$和其他类库的冲突</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">1、 jQuery();</div><div class="line"></div><div class="line">1、(function($)&#123;</div><div class="line"></div><div class="line">&#125;)(jQuery)</div><div class="line"></div><div class="line"></div><div class="line">2、 将$的控制权 转让 同时 里面 返回jQuery</div><div class="line">var $$=jQuery.noConflict();</div></pre></td></tr></table></figure>
+<h3 id="read"><a href="#read" class="headerlink" title="read"></a>read</h3><blockquote>
+<p>html页面中DOM结构和所有文件资源（如：图片加载完成后）才执行<br>onload 调用多次  执行一次<br>window.onload=function(){    }</p>
+<p>DOM结构加载完后执行（不包括所有文件）<br>ready 可以调用多次<br>$(document).ready(function(){   })</p>
+<p>区别三   $(document).ready(function(){   })缩写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(function()&#123; console.log($(&apos;#oDiv&apos;))</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="jQuery中的选择器"><a href="#jQuery中的选择器" class="headerlink" title="jQuery中的选择器"></a>jQuery中的选择器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">1    //id选择器$(&apos;#id&apos;) : 匹配一个id名为oDiv的元素</div><div class="line"></div><div class="line">2    //群组选择器 获取一个id名为div1和class名为div2的元素</div><div class="line">     console.log($(&apos;#div5, .div2&apos;))</div><div class="line"></div><div class="line">3    //后代选择器 匹配id名为div5中的 后代元素中的所有span</div><div class="line">    console.log($(&apos;#div5 span&apos;))</div><div class="line"></div><div class="line">4    //后代中 所有class名为span2的后代元素span</div><div class="line">    console.log($(&apos;#div5 span.span2&apos;))</div><div class="line"></div><div class="line">5    //匹配后代中， 所有类名为span2的元素</div><div class="line">    console.log($(&apos;#div5 .span2&apos;))</div><div class="line"></div><div class="line">6    //匹配指定父元素中的直接所有span子元素</div><div class="line">    console.log($(&apos;#div5&gt;span&apos;))</div><div class="line"></div><div class="line">7    //匹配指定元素后面紧跟的下一个元素</div><div class="line">    console.log($(&apos;.span1+&apos;));</div><div class="line">     console.log($(&apos;.span1&apos;)).next();</div><div class="line"></div><div class="line">8    //匹配指定元素后面的所有同辈元素</div><div class="line">    console.log($(&apos;.sd2&apos;)).nextAll()</div><div class="line">     console.log($(&apos;.sd2~&apos;))</div><div class="line"></div><div class="line">9    //匹配页面中的所有元素</div><div class="line">    console.log($(&apos;*&apos;));</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="jQuery选择器的筛选"><a href="#jQuery选择器的筛选" class="headerlink" title="jQuery选择器的筛选"></a>jQuery选择器的筛选</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">1     //匹配所有li元素中 最后一个li</div><div class="line">     $(&apos;ul li:last&apos;).css(&apos;background-color&apos;,&apos;green&apos;);</div><div class="line">     console.log($(&apos;ul li:last&apos;));</div><div class="line"></div><div class="line">2     //匹配索引为2的li  根据指定索引得到相应元素</div><div class="line">     console.log($(&apos;ul li:eq(2)&apos;));</div><div class="line"></div><div class="line">3     //匹配所有li元素中  索引小于2的元素  匹配小于指定索引的元素</div><div class="line">     console.log($(&apos;ul li:lt(2)&apos;));</div><div class="line"></div><div class="line">4     //匹配所有li元素中  索引大于2的元素  匹配大于指定索引的元素</div><div class="line">     console.log($(&apos;ul li:gt(2)&apos;));</div><div class="line"></div><div class="line">5     //匹配所有索引为偶数的li元素</div><div class="line">     console.log($(&apos;ul li:even&apos;));</div><div class="line"></div><div class="line">6     //匹配所有索引为奇数的li元素</div><div class="line">     console.log($(&apos;ul li:odd&apos;))</div><div class="line"></div><div class="line">7     //匹配除了(:not中匹配的)所有对应元素</div><div class="line">     console.log($(&apos;ul li:not(.oDiv)&apos;));</div><div class="line"></div><div class="line">8     //匹配包含指定选择器（span）的元素</div><div class="line">     console.log($(&apos;ul li:has(span)&apos;));</div><div class="line"></div><div class="line">9     //匹配一个空标签  匹配一个不包含任何元素和文本的元素</div><div class="line">     console.log($(&apos;ul li:empty&apos;));</div><div class="line"></div><div class="line">10     //匹配作为父级的元素</div><div class="line">     console.log($(&apos;ul li:parent&apos;));</div><div class="line"></div><div class="line">11    //匹配所包含的内容匹配 元素</div><div class="line">     console.log($(&apos;ul li:contains(&quot;3&quot;)&apos;));</div><div class="line"></div><div class="line">12    //匹配根元素</div><div class="line">     console.log($(&apos;:root&apos;))</div><div class="line"></div><div class="line">13    //匹配所有标题元素</div><div class="line">     console.log($(&apos;:header&apos;))</div><div class="line"></div><div class="line"></div><div class="line">14   //匹配动画</div><div class="line">     console.log($(&apos;div:animated&apos;))</div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
+<h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//匹配有[attr]属性的元素   console.log($(&apos;div[id]&apos;))</div><div class="line"></div><div class="line">//匹配                   console.log($(&apos;input[name]&apos;))</div></pre></td></tr></table></figure>
+<h2 id="关于子元素的筛选"><a href="#关于子元素的筛选" class="headerlink" title="关于子元素的筛选"></a>关于子元素的筛选</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">//匹配指定父元素中的第一个子元素</div><div class="line">console.log($(&apos;ul li:first-child&apos;))</div><div class="line"></div><div class="line">//匹配每个指定父元素中的最后一个子元素</div><div class="line">console.log($(&apos;ul li:last-child&apos;)).css(&apos;backgroundColor&apos;,&apos;red&apos;);</div><div class="line"></div><div class="line">//匹配每个指定父级元素中的指定位置的子元素</div><div class="line">console.log($(&apos;ul li:nth-child(2)&apos;))</div><div class="line"></div><div class="line">//倒数第二个</div><div class="line">console.log($(&apos;ul li:last-child(2)&apos;))</div><div class="line"></div><div class="line">//奇数</div><div class="line">console.log($(&apos;ul li:odd&apos;))</div><div class="line"></div><div class="line">//偶数</div><div class="line">console.log($(&apos;ul li:even&apos;))</div><div class="line"></div><div class="line">//匹配ul唯一的一个li子节点</div><div class="line">console.log($(&apos;ul li:only-child&apos;))</div></pre></td></tr></table></figure>
+<h2 id="增加和移除属性"><a href="#增加和移除属性" class="headerlink" title="增加和移除属性"></a>增加和移除属性</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">属性 操作</div><div class="line">attr  操作自定义属性</div><div class="line">prop  操作固有属性</div><div class="line"></div><div class="line"></div><div class="line">$(function()&#123;</div><div class="line">   setTimeout(function()&#123;</div><div class="line">        $(&apos;div&apos;).attr(&apos;own&apos;)    // 获取属性</div><div class="line">        $(&apos;div&apos;).removeAttr(&apos;class&apos;);   //移除属性</div><div class="line">        $(&apos;div&apos;).attr(&apos;own&apos;,&apos;hello&apos;); //添加属性</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="在html-中保存数据-data-key-value-通过data（key）"><a href="#在html-中保存数据-data-key-value-通过data（key）" class="headerlink" title="在html 中保存数据  data-key=value  通过data（key）"></a>在html 中保存数据  data-key=value  通过data（key）</h3><p>console.log($(‘div.selected’).data(‘name’,’zhufeng’));</p>
+<h2 id="获取表单元素内容-text-html-val"><a href="#获取表单元素内容-text-html-val" class="headerlink" title="获取表单元素内容 text html  val"></a>获取表单元素内容 text html  val</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">   var name=&apos;vueJs&apos;;</div><div class="line">   $(&apos;h3&apos;).text(&apos;hello&apos;+name+&apos;!&apos;);</div><div class="line">   $</div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
+<h2 id="jQuery事件基础"><a href="#jQuery事件基础" class="headerlink" title="jQuery事件基础"></a>jQuery事件基础</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$(&apos;div&apos;).click(function()&#123;</div><div class="line">   this---&gt;绑定事件的元素 原生对象</div><div class="line">   $(this).hide(300)</div><div class="line">   $(this).slideUp(300) // 拉帘</div><div class="line">   $(this).stop() //隐藏当前动画</div><div class="line">&#125;)</div><div class="line"></div><div class="line"></div><div class="line">//点击两次才出发点击事件</div><div class="line">$(&apos;div&apos;).dblclick(function()&#123;</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="动画效果"><a href="#动画效果" class="headerlink" title="动画效果"></a>动画效果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">   if( $(&apos;oDiv&apos;).is(&apos;:visible&apos;) ) &#123;</div><div class="line">       $(&apos;oDiv&apos;).hide(300)    //隐藏</div><div class="line">        $(&apos;oDiv&apos;).slideUp(300)   // 收起</div><div class="line">        $(&apos;oDiv&apos;).fadeOut(300) //淡出（1-0）</div><div class="line">     &#125;else&#123;</div><div class="line">        $(&apos;oDiv&apos;).show(300)    // 显示</div><div class="line">        $(&apos;oDiv&apos;).slideDown300)   // 下拉</div><div class="line">        $(&apos;oDiv&apos;).fadeIn()   //淡入（0-1）</div><div class="line">      &#125;</div><div class="line"> &#125;)</div></pre></td></tr></table></figure>
+<h2 id="原生对象和jQuery-对象"><a href="#原生对象和jQuery-对象" class="headerlink" title="原生对象和jQuery 对象"></a>原生对象和jQuery 对象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var obox=document.getElementById(&apos;obox&apos;);</div><div class="line">//将原生对象转化为jq对象</div><div class="line">console.log($(obox))</div><div class="line">console.log(jQuery(obox))</div><div class="line">console.log($(&apos;#obox&apos;))</div><div class="line"></div><div class="line">//将jq对象转化为原生对象</div><div class="line">console.log($(&apos;#obox&apos;)[0])</div><div class="line">console.log($(&apos;#obox&apos;).get(0));</div><div class="line"></div><div class="line">//根据指定索引 找到对应的jq对象</div><div class="line">console.log($(&apos;div&apos;).eq(0));</div><div class="line"></div><div class="line">// 回到上一次的状态</div><div class="line">console.log($(&apos;#obox&apos;).end());</div></pre></td></tr></table></figure>
+<h2 id="在String原型上扩展一个方法-去除空白"><a href="#在String原型上扩展一个方法-去除空白" class="headerlink" title="在String原型上扩展一个方法 ,去除空白"></a>在String原型上扩展一个方法 ,去除空白</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">String.prototype.myTrim=function myTrim()&#123;</div><div class="line">     if(&apos;trim&apos; in String.prototype)&#123;</div><div class="line">          return this.trim();</div><div class="line">     &#125;</div><div class="line">     return this.replace(/^ +| +$/g,&apos;&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/07/08/15.jQuery/">
+    <time datetime="2017-07-08T06:18:29.717Z" class="entry-date">
+        2017-07-08
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/07/08/16.jQuery的DOM事件/" rel="prev"><span class="meta-nav">←</span> jQuery基础总结16</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/07/08/14.面向对象/" rel="next">JavaScript基础总结14 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/08/mobile3/">移动端总结-3</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/HTML5+CSS3/11/">11.html5+css3</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/HTML5+CSS3/10/">10.html5+css3</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/HTML5+CSS3/9/">9.html5+css3</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/08/HTML5+CSS3/8/">8.html5+css3</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
