@@ -60,6 +60,55 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-23.jq扩展插件" class="post-23.jq扩展插件 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/07/08/23.jq扩展插件/">23、jq扩展插件</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/23.jq扩展插件/" data-id="cj54mt05u000alcw9toc4nagn" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="jq扩展插件"><a href="#jq扩展插件" class="headerlink" title="jq扩展插件"></a>jq扩展插件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$.extend  在jq对象自身上扩展插件</div><div class="line">$.fn.extend  在jq原型上扩展插件</div><div class="line"></div><div class="line">$this.each(cur,function()&#123;&#125;)</div><div class="line">each里面的this是指当前的元素</div></pre></td></tr></table></figure>
+<p>在元素自定义属性上保存属性值attr 只能保存字符串的值<br>jq对象.data用来在元素上保存数据 字符串和对象数据类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">jq:</div><div class="line">fadeIn  fadeOut  渐隐渐现</div></pre></td></tr></table></figure>
+<h2 id="html5"><a href="#html5" class="headerlink" title="html5"></a>html5</h2><p>标签语义化<br><code>以前是object里插入flag控件</code><br>媒体  audio<br>音频   video<br>本地存储<br>canvas</p>
+<p>地理定位<br>表单控件  number</p>
+<h2 id="IE-条件注释-解决html5-兼容问题"><a href="#IE-条件注释-解决html5-兼容问题" class="headerlink" title="IE 条件注释   解决html5 兼容问题"></a>IE 条件注释   解决html5 兼容问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"> article, aside, footer, header, hgroup, main, nav, section &#123;</div><div class="line">            display: block;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">如果IE版本低于小于9 引入以下js文件</div><div class="line">&lt;!--[if It IE 9]&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;html5.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;![endif]--&gt;</div><div class="line"></div><div class="line">如果IE版本小于等于9 引入以下js文件</div><div class="line"> &lt;!--[if Ite IE 9]&gt;</div></pre></td></tr></table></figure>
+<h3 id="html5结构标签"><a href="#html5结构标签" class="headerlink" title="html5结构标签"></a>html5结构标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">header:头部</div><div class="line">section ：划分区域</div><div class="line">footer：底部</div><div class="line">main：表示文档中唯一主体部分</div><div class="line">nav：导航链接部分</div><div class="line"></div><div class="line">figure：图片 内容标签</div><div class="line">figcaption:图像描述</div><div class="line"></div><div class="line">article:包含文章、博客、文档的标签</div><div class="line">hgroup:包含一组标题</div><div class="line">aside：侧边栏或者广告</div></pre></td></tr></table></figure>
+<h3 id="jq中检测number数据类型公式"><a href="#jq中检测number数据类型公式" class="headerlink" title="jq中检测number数据类型公式"></a>jq中检测number数据类型公式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.type(n)===&apos;number&apos;?step=n:step++;</div></pre></td></tr></table></figure>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/07/08/23.jq扩展插件/">
+    <time datetime="2017-07-08T06:39:15.051Z" class="entry-date">
+        2017-07-08
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-22.ECMAScript" class="post-22.ECMAScript post type-post status-publish format-standard hentry">
     <!---->
 
@@ -75,7 +124,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/22.ECMAScript/" data-id="cj4v4n16e000dcww9822py008" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/22.ECMAScript/" data-id="cj54mt075000glcw9bc9p6wop" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -129,7 +178,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/21.DOM二级事件绑定/" data-id="cj4v4n16a000ccww9nhcg3d27" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/21.DOM二级事件绑定/" data-id="cj54mt075000hlcw9ixx3mbm9" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -171,7 +220,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/20.鼠标跟随/" data-id="cj4v4n165000bcww98jf7aiyo" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/20.鼠标跟随/" data-id="cj54mt05u0009lcw9a2dqd1ur" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -228,7 +277,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/19.DOM零级，二级事件基础/" data-id="cj4v4n15x0009cww9mp6th923" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/19.DOM零级，二级事件基础/" data-id="cj54mt05f0008lcw95tnle4dy" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -280,7 +329,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/18.事件基础/" data-id="cj4v4n15s0008cww9we5d0tki" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/18.事件基础/" data-id="cj54mt04z0006lcw9u4rewj8k" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -337,7 +386,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/17.常用的工具方法/" data-id="cj4v4n1520007cww98x2oft8h" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/17.常用的工具方法/" data-id="cj54mt07l000jlcw9w0nzgdra" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -385,7 +434,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/16.jQuery的DOM事件/" data-id="cj4v4n14q0006cww9owd4cb16" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/16.jQuery的DOM事件/" data-id="cj54mt04k0005lcw9bb9h1kfq" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -434,7 +483,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/15.jQuery/" data-id="cj4v4n14g0005cww99jyj9y3e" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/15.jQuery/" data-id="cj54mt05f0007lcw92m7q80ae" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -497,7 +546,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/14.面向对象/" data-id="cj4v4n1480004cww9ptp733wp" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/14.面向对象/" data-id="cj54mt03o0002lcw9kgq8s7qv" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -514,51 +563,6 @@
     <footer class="entry-meta">
     <a href="/2017/07/08/14.面向对象/">
     <time datetime="2017-07-08T06:17:18.011Z" class="entry-date">
-        2017-07-08
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
-    <article id="post-13.回调函数" class="post-13.回调函数 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/07/08/13.回调函数/">JavaScript基础总结13</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/13.回调函数/" data-id="cj4v4n1420003cww9ahviq7ks" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h1 id="17、回调函数"><a href="#17、回调函数" class="headerlink" title="17、回调函数"></a>17、回调函数</h1><h2 id="在方法A里-把-方法B当做一个参数-在方法A调用执行-何时执行执行多少次都可以"><a href="#在方法A里-把-方法B当做一个参数-在方法A调用执行-何时执行执行多少次都可以" class="headerlink" title="在方法A里 把 方法B当做一个参数 在方法A调用执行  何时执行执行多少次都可以"></a>在方法A里 把 方法B当做一个参数 在方法A调用执行  何时执行执行多少次都可以</h2><blockquote>
-<p>回调函数中 一般情况下 this都是window<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function fn1()&#123;</div><div class="line">    console.log(&apos;fn1&apos;);</div><div class="line">&#125;</div><div class="line">function fn1(callBack)&#123;</div><div class="line">    setTimeout(funciton()&#123;</div><div class="line">       callBack();</div><div class="line">    &#125;,1000)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-</blockquote>
-
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/07/08/13.回调函数/">
-    <time datetime="2017-07-08T06:15:01.054Z" class="entry-date">
         2017-07-08
     </time>
 </a>
@@ -602,6 +606,10 @@
       <ul>
         
           <li>
+            <a href="/2017/07/15/41.Vue/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2017/07/08/mobile3/">移动端总结-3</a>
           </li>
         
@@ -615,10 +623,6 @@
         
           <li>
             <a href="/2017/07/08/HTML5+CSS3/9/">9.html5+css3</a>
-          </li>
-        
-          <li>
-            <a href="/2017/07/08/HTML5+CSS3/8/">8.html5+css3</a>
           </li>
         
       </ul>

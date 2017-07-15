@@ -60,6 +60,50 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-33.jQuery版ajax" class="post-33.jQuery版ajax post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/07/08/33.jQuery版ajax/">33.jQuery版Ajax</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/33.jQuery版ajax/" data-id="cj54mt080000nlcw9o080e1rd" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h1 id="jquery版ajax"><a href="#jquery版ajax" class="headerlink" title="jquery版ajax"></a>jquery版ajax</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"> $(function()&#123;</div><div class="line">        $.ajax(&#123;</div><div class="line">            url:url, //接口请求地址</div><div class="line">            type:&apos;GET&apos;,  //请求方式      1.9以下的版本用method</div><div class="line">            beforeSend:function(xhr)&#123;  // 发送请求之前 触发</div><div class="line"></div><div class="line">            &#125;,</div><div class="line">            cache:true, //  是否缓存      true（缓存）  false（不缓存）</div><div class="line">            async:true,  //true 异步   false 同步</div><div class="line">            context:window,  //指定success里面的上下文</div><div class="line">            dataType:&apos;text&apos;, // 指定解析 接收的数据的格式  responseType(原生的写法)</div><div class="line">//   跨域    dataType:&apos;jsonp&apos;</div><div class="line">            jsonp:&apos;cd&apos;,   //重写jsonp的请求 URL中回调函数key的名称</div><div class="line">            jsonpCallback:&apos;fn&apos;, // 指定jsonp回调函数的名称</div><div class="line">            success:function(result)&#123; //成功回调函数</div><div class="line">                console.log(result);</div><div class="line">            &#125;,</div><div class="line"></div><div class="line">            timeout:3000, //xhr,timeout 设置超时时间 如果超时会触发error时间</div><div class="line">            // 原生 xhr.timeout  触发 xhr.ontimeout=function</div><div class="line">            error:function(err)&#123;  //请求出错</div><div class="line">                console.log(err);</div><div class="line">            &#125;,</div><div class="line"></div><div class="line">            complete:function(xhr)&#123; //不管提交成功不成功  都会执行</div><div class="line"></div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+<p>对象合并<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">原生的方法</div><div class="line">Object.assign(default1,options1)</div><div class="line"></div><div class="line">es6的方法</div><div class="line">for(let attr in options)&#123;</div><div class="line">if(option1.hasOwnProperty(attr))&#123;</div><div class="line">       default[attr]=opations[attr];</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/07/08/33.jQuery版ajax/">
+    <time datetime="2017-07-08T08:05:32.763Z" class="entry-date">
+        2017-07-08
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-32.server" class="post-32.server post type-post status-publish format-standard hentry">
     <!---->
 
@@ -75,7 +119,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/32.server/" data-id="cj4v4n17k000ncww9clq4efbi" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/32.server/" data-id="cj54mt07l000llcw9413bu3ez" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -135,7 +179,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/31.ajax+node/" data-id="cj4v4n17h000mcww9ngssbyqp" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/31.ajax+node/" data-id="cj54mt08g000qlcw9dpi489hm" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -189,7 +233,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/30.EJS模板引擎/" data-id="cj4v4n17d000lcww9oanhf97s" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/30.EJS模板引擎/" data-id="cj54mt080000olcw9z91aqu83" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -238,7 +282,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/29.字体图标/" data-id="cj4v4n17u000pcww9cqbys4eh" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/29.字体图标/" data-id="cj54mt075000ilcw9gwde69m0" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -289,7 +333,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/28.移动端/" data-id="cj4v4n174000jcww9lk1xfpnq" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/28.移动端/" data-id="cj54mt075000elcw90tzypl0j" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -342,7 +386,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/27.animation/" data-id="cj4v4n170000icww9pobchmu9" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/27.animation/" data-id="cj54mt06a000clcw9vih3g9ad" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -386,7 +430,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/26.轮播图/" data-id="cj4v4n16w000hcww9mrwbdsz2" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/26.轮播图/" data-id="cj54mt07l000klcw9ht326bnk" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -428,7 +472,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/25.3D动画/" data-id="cj4v4n16s000gcww9csdd7tcy" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/25.3D动画/" data-id="cj54mt075000flcw9e4h87bmb" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -478,7 +522,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/24.CSS3属性/" data-id="cj4v4n16o000fcww9mbqx4pel" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/24.CSS3属性/" data-id="cj54mt05u000blcw98d5t10fm" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -498,55 +542,6 @@
     <footer class="entry-meta">
     <a href="/2017/07/08/24.CSS3属性/">
     <time datetime="2017-07-08T06:43:49.275Z" class="entry-date">
-        2017-07-08
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
-    <article id="post-23.jq扩展插件" class="post-23.jq扩展插件 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/07/08/23.jq扩展插件/">23、jq扩展插件</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/08/23.jq扩展插件/" data-id="cj4v4n16j000ecww9tt5e4rk5" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h1 id="jq扩展插件"><a href="#jq扩展插件" class="headerlink" title="jq扩展插件"></a>jq扩展插件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$.extend  在jq对象自身上扩展插件</div><div class="line">$.fn.extend  在jq原型上扩展插件</div><div class="line"></div><div class="line">$this.each(cur,function()&#123;&#125;)</div><div class="line">each里面的this是指当前的元素</div></pre></td></tr></table></figure>
-<p>在元素自定义属性上保存属性值attr 只能保存字符串的值<br>jq对象.data用来在元素上保存数据 字符串和对象数据类型</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">jq:</div><div class="line">fadeIn  fadeOut  渐隐渐现</div></pre></td></tr></table></figure>
-<h2 id="html5"><a href="#html5" class="headerlink" title="html5"></a>html5</h2><p>标签语义化<br><code>以前是object里插入flag控件</code><br>媒体  audio<br>音频   video<br>本地存储<br>canvas</p>
-<p>地理定位<br>表单控件  number</p>
-<h2 id="IE-条件注释-解决html5-兼容问题"><a href="#IE-条件注释-解决html5-兼容问题" class="headerlink" title="IE 条件注释   解决html5 兼容问题"></a>IE 条件注释   解决html5 兼容问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"> article, aside, footer, header, hgroup, main, nav, section &#123;</div><div class="line">            display: block;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">如果IE版本低于小于9 引入以下js文件</div><div class="line">&lt;!--[if It IE 9]&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;html5.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;![endif]--&gt;</div><div class="line"></div><div class="line">如果IE版本小于等于9 引入以下js文件</div><div class="line"> &lt;!--[if Ite IE 9]&gt;</div></pre></td></tr></table></figure>
-<h3 id="html5结构标签"><a href="#html5结构标签" class="headerlink" title="html5结构标签"></a>html5结构标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">header:头部</div><div class="line">section ：划分区域</div><div class="line">footer：底部</div><div class="line">main：表示文档中唯一主体部分</div><div class="line">nav：导航链接部分</div><div class="line"></div><div class="line">figure：图片 内容标签</div><div class="line">figcaption:图像描述</div><div class="line"></div><div class="line">article:包含文章、博客、文档的标签</div><div class="line">hgroup:包含一组标题</div><div class="line">aside：侧边栏或者广告</div></pre></td></tr></table></figure>
-<h3 id="jq中检测number数据类型公式"><a href="#jq中检测number数据类型公式" class="headerlink" title="jq中检测number数据类型公式"></a>jq中检测number数据类型公式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.type(n)===&apos;number&apos;?step=n:step++;</div></pre></td></tr></table></figure>
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/07/08/23.jq扩展插件/">
-    <time datetime="2017-07-08T06:39:15.051Z" class="entry-date">
         2017-07-08
     </time>
 </a>
@@ -590,6 +585,10 @@
       <ul>
         
           <li>
+            <a href="/2017/07/15/41.Vue/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2017/07/08/mobile3/">移动端总结-3</a>
           </li>
         
@@ -603,10 +602,6 @@
         
           <li>
             <a href="/2017/07/08/HTML5+CSS3/9/">9.html5+css3</a>
-          </li>
-        
-          <li>
-            <a href="/2017/07/08/HTML5+CSS3/8/">8.html5+css3</a>
           </li>
         
       </ul>
